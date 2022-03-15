@@ -1,0 +1,29 @@
+﻿@using Vjezba1.Models
+@model StudentiDB
+@{
+    ViewBag.Title = "Popis";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Popis</h2>
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>ime</th>
+    <th>prezime</th>
+    <th>oib</th>
+    <th>Detalji</th>
+
+</tr>
+@foreach (var student in Model.VratiListu())
+{
+    <tr>
+    <th>@student.ID</th>
+    <th>@student.ime</th>
+    <th>@student.prezime</th>
+    <th>@student.oib</th>
+    <th>@Html.ActionLink("info","detalji",new {id=student.ID })</th>
+        </tr>
+}
+
+</table>

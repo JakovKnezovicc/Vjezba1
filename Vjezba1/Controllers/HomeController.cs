@@ -26,5 +26,12 @@ namespace Vjezba1.Controllers
 
             return View();
         }
+        public ActionResult Stranica2()
+        {
+            ViewBag.Message = "Druga stranica.";
+            
+            return View();
+        }
+
     }
 }
